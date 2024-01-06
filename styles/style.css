@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,7 +17,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-
+  justify-content: center;
 }
 
 h1,
@@ -42,7 +43,7 @@ ol {
   display: flex;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
+  height: auto;
   gap: 30px;
   margin: 133px 30px;
 }
@@ -83,6 +84,8 @@ ol {
 .search-form__label {
   display: flex;
   width: fit-content;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 .search-form__label:has(:focus-visible:not(.search-form__textfield:active)) {
@@ -96,7 +99,7 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff, 0.7;
   font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -106,8 +109,8 @@ ol {
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   display: flex;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
   align-items: center;
 }
 
@@ -231,11 +234,16 @@ ol {
   color: #fff;
 }
 
-.content__list::-webkit-scrollbar {
-  width: 0;
-}
 .content__card-link:focus {
   outline: none;
+}
+
+.content__card-link:active { 
+  background-color: #545050; 
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
 
 .content__card-link:focus-visible {
@@ -254,7 +262,7 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald, sans-serif;
+  font-family: inherit;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -262,6 +270,10 @@ ol {
   text-transform: uppercase;
   margin-bottom: 6px;
   padding: 2px 0 0 2px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -272,6 +284,7 @@ ol {
   font-weight: 400;
   line-height: 16.2px; 
   padding-left: 2px;
+  max-width: 200px;
 }
 
 .content__video-card-thumbnail {
@@ -279,16 +292,4 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card:hover {
-  text-decoration: underline;
-}
-  
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.page::-webkit-scrollbar {
-  width: 0;
 }
