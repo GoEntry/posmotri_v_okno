@@ -45,7 +45,7 @@ ol {
   width: 1140px;
   height: auto;
   gap: 30px;
-  margin: 133px 30px;
+  margin: 108px 30px;
 }
 
 .result__video-container {
@@ -197,7 +197,7 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 26px;
   width: 100%;
   height: 100%;
@@ -211,6 +211,9 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  position: relative;
+  max-width: 260px;
+  max-height: 210px;
 }
 
 .content__accent {
@@ -262,7 +265,7 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: inherit;
+  font-family: Oswald, "Arial", sans-serif, ;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
